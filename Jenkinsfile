@@ -32,7 +32,7 @@ pipeline {
             script {
                 def jsonFile = readFile 'report.json'
                 def jsonData = readJSON text: jsonFile
-                sh "${jsonData}"
+                sh "echo ${jsonData}"
                 //sh "Repo: ${jsonData.created_pull_request[0].repo}"
                 //echo "Message: ${jsonData.created_pull_request[0].msg}"
             }
