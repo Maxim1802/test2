@@ -38,7 +38,7 @@ pipeline {
                 //echo "Message: ${jsonData.created_pull_request[0].msg}"
                 
                 def report = readFile 'report_2'
-                sendSlackMessage(msg: ${report})
+                sendSlackMessage(msg: "${report}")
             }
 
             //echo "Repo: ${jsonData.created_pull_request[0].repo}"
