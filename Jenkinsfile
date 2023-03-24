@@ -29,8 +29,13 @@ pipeline {
     }
     post {
         always {
-            def jsonFile = readFile 'report.json'
-            def jsonData = readJSON text: jsonFile
+            script {
+                def jsonFile = readFile 'report.json'
+                def jsonData = readJSON text: jsonFile
+                echo "Repo: ${jsonData.created_pull_request[0].repo}"
+                echo "Message: ${jsonData.created_pull_request[0].msg}"
+            }
+
             echo "Repo: ${jsonData.created_pull_request[0].repo}"
             echo "Message: ${jsonData.created_pull_request[0].msg}"
             sendSlackMessage(msg: "${jsonData.created_pull_request[0].repo}")
