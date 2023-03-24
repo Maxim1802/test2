@@ -1,32 +1,32 @@
 {
 	"created_pull_request": [
     {
-			"repo": "test1"
-	  		"msg": "Create pr"
+			"repo": "test1",
+	  	"msg": "Create pr"
 		},
 		{
-			"repo": "test2"
-	  		"msg": "Create pr"
+			"repo": "test2",
+	  	"msg": "Create pr"
 		}
 	],
 	"merged_pull_request": [		
     {
-			"repo": "test1"
-	  		"msg": "Merge dev into stage"
+			"repo": "test1",
+	  	"msg": "Merge dev into stage"
 		},
 		{
-			"repo": "test2"
+			"repo": "test2",
 	  		"msg": "Merge dev into stage"
 		}
 	],
 	"skiped_repositories": [		
     {
-			"repo": "test3"
+			"repo": "test3",
 	  		"msg": "Error1"
 		},
 		{
-			"repo": "test4"
-	  		"msg": "Error2"
+			"repo": "test4",
+	  	"msg": "Error2"
 		}
 	]
 }
